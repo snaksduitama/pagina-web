@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snack y Fiesta</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+body {
+  background: #fff7f8;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#fff7f8;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+background:white;
+box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#ff5d8f;
+}
+
+nav a{
+text-decoration:none;
+margin:15px;
+color:#444;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ff5d8f;
+}
+
+.banner{
+display:flex;
+justify-content:space-around;
+align-items:center;
+padding:60px;
+}
+
+.texto{
+width:45%;
+}
+
+.texto h1{
+font-size:45px;
+color:#333;
+margin-bottom:20px;
+}
+
+.texto span{
+color:#ff5d8f;
+}
+
+.texto p{
+font-size:18px;
+margin-bottom:25px;
+color:#666;
+}
+
+.boton{
+padding:15px 25px;
+background:#ff5d8f;
+color:white;
+text-decoration:none;
+border-radius:30px;
+margin-right:15px;
+}
+
+.banner img{
+width:420px;
+border-radius:20px;
+}
+
+section{
+padding:60px;
+text-align:center;
+}
+
+.tarjetas{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.card{
+background:white;
+width:250px;
+padding:20px;
+border-radius:20px;
+box-shadow:0 5px 10px rgba(0,0,0,.1);
+}
+
+.card img{
+width:100%;
+height:170px;
+border-radius:15px;
+}
+
+.card h3{
+margin:15px;
+color:#ff5d8f;
+}
+
+.card a{
+display:inline-block;
+margin-top:15px;
+padding:10px 20px;
+background:#ff5d8f;
+color:white;
+text-decoration:none;
+border-radius:25px;
+}
+
+footer{
+background:#ffdbe7;
+padding:30px;
+text-align:center;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Boom Snack
+</div>
+
+<nav>
+
+<a href="index.HTML">Inicio</a>
+<a href="nosotros.HTML">Nosotros</a>
+<a href="snacks.HTML">Snacks</a>
+<a href="decoracion.HTML">Decoracion</a>
+<a href="galeria.HTML">Galeria</a>
+<a href="contacto.HTML">Contacto</a>
+
+</nav>
+
+</header>
+
+<div class="banner">
+
+<div class="texto">
+
+<h1>Hacemos de cada celebracion un momento <span>inolvidable</span></h1>
+
+<p>
+Ofrecemos deliciosos snacks y decoracion creativa para todo tipo de eventos.
+</p>
+
+
+
+
+
+
+<a href="https://wa.me/573132730154?text=Hola,%20quiero%20cotizar%20un%20evento" target="_blank" class="boton">Cotiza tu Evento</a>
+
+</div>
+
+<img src="imagenes/cuervito.jpeg">
+
+</div>
+
+<section>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, sans-serif; background: transparent; }
+
+  /* Contenedor principal del banner */
+  .carousel-container {
+    position: relative;
+    max-width: 1200px; /* Tamaño recomendado de ancho */
+    height: 450px;     /* Altura del banner */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    background-color: #2b1b54; /* Fondo oscuro por si carga la imagen */
+  }
+
+  /* Diapositivas */
+  .slide {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide.active {
+    display: block;
+  }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+  }
+
+  /* Contenido sobrepuesto en la imagen (Texto y Botón) */
+  .slide-content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    max-width: 45%;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+  }
+
+  .slide-content h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+
+  .slide-content p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .btn-action {
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: #ffffff;
+    color: #2b1b54;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s;
+  }
+
+  .btn-action:hover {
+    background-color: #e0e0e0;
+  }
+
+  /* Botones de navegación lateral (< y >) */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    transition: 0.3s ease;
+    border-radius: 50%;
+    user-select: none;
+    background-color: rgba(0,0,0,0.3);
+    border: none;
+  }
+
+  .next { right: 15px; }
+  .prev { left: 15px; }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.7);
+  }
+</style>
+</head>
+<body>
+
+<div class="carousel-container">
+  <!-- Diapositiva 1 -->
+  <div class="slide active">
+    <img src="banner/1.jpg">
+    <div class="slide-content">
+      <h2>Título snacks y Dulces</h2>
+      
+      
+    </div>
+  </div>
+
+  <!-- Diapositiva 2 -->
+  <div class="slide">
+    <img src="banner/2.jpg">
+    <div class="slide-content">
+      <h2>Desayunos Sorpresas</h2>
+      
+      
+    </div>
+  </div>
+
+  <!-- Diapositiva 3 -->
+  <div class="slide">
+    <img src="banner/3.jpg">
+    <div class="slide-content">
+      <h2>Eventos de Baby Shower</h2>
+      
+      
+    </div>
+  </div>
+
+  <!-- Diapositiva 4 -->
+  <div class="slide">
+    <img src="banner/4.jpg">
+    <div class="slide-content">
+      <h2>Eventos de cumpleaños</h2>
+      
+      
+    </div>
+  </div>
+
+  <!-- Diapositiva 5 -->
+  <div class="slide">
+   <img src="banner/5.jpg">
+    <div class="slide-content">
+      <h2>servicios de eventos</h2>
+      
+      
+    </div>
+  </div>
+
+  <!-- Botones de control manual -->
+  <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+  <button class="next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+
+<script>
+  let slideIndex = 0;
+  const slides = document.querySelectorAll('.slide');
+  // Cambia automáticamente cada 5000 milisegundos (5 segundos)
+  let autoSlideTimer = setInterval(() => changeSlide(1), 5000);
+
+  function showSlide(index) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    
+    if (index >= slides.length) slideIndex = 0;
+    if (index < 0) slideIndex = slides.length - 1;
+    
+    slides[slideIndex].classList.add('active');
+  }
+
+  function changeSlide(n) {
+    clearInterval(autoSlideTimer); // Reinicia el temporizador al pulsar un botón
+    slideIndex += n;
+    showSlide(slideIndex);
+    autoSlideTimer = setInterval(() => changeSlide(1), 5000);
+  }
+</script>
+
+</body>
+</html>
+
+
+
+<h2>Nuestros Snacks</h2>
+
+<div class="tarjetas">
+
+<div class="card">
+<img src="imagenes/clasica.jpg">
+<h3>Caja Clasica</h3>
+<a href="pagina1.html">Ver mas</a>
+
+</div>
+
+<div class="card">
+<img src="imagenes/caj picante.jpg">
+<h3>Caja Premium</h3>
+<a href="pagina4.html">Ver mas</a>
+</div>
+
+<div class="card">
+<img src="imagenes/dul o sal.jpg">
+<h3>Snacks Dulces</h3>
+<a href="pagina3.html">Ver mas</a>
+
+</div>
+
+<div class="card">
+<img src="imagenes/fiestero picante.jpg">
+<h3>picante</h3>
+<a href="pagina2.html">Ver mas</a>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Decoracion de Eventos</h2>
+
+<div class="tarjetas">
+
+<div class="card">
+<img src="imagenes/cumple dec.jpg">
+<h3>Cumples</h3>
+<a href="pagina5.html">Ver mas</a>
+
+</div>
+
+<div class="card">
+<img src="imagenes/baby.jpg">
+<h3>Baby Shower</h3>
+<a href="pagina6.html">Ver mas</a>
+
+</div>
+
+<div class="card">
+<img src="imagenes/tematica.jpg">
+<h3>Tematicas</h3>
+<a href="pagina7.html">Ver mas</a>
+
+</div>
+
+<div class="card">
+<img src="imagenes/especial.jpg">
+<h3>Eventos Especiales</h3>
+<a href="pagina8.html">Ver mas</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Boom Snack</h3>
+
+<p>
+Duitama - Boyaca
+</p>
+
+<p>
+3132730154
+</p>
+
+<p>
+snaksduitama@gmail.com
+</p>
+
+<p>
+2026 Boom Snack - Todos los derechos reservados
+</p>
+
+</footer>
+
+</body>
+
+</html>
