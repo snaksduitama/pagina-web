@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snacks</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#fff7f8;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+background:white;
+box-shadow:0 2px 5px rgba(0,0,0,.1);
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#ff5d8f;
+}
+
+nav a{
+text-decoration:none;
+margin:15px;
+color:#444;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#ff5d8f;
+}
+
+.banner{
+display:flex;
+justify-content:space-around;
+align-items:center;
+padding:60px;
+}
+
+.texto{
+width:45%;
+}
+
+.texto h1{
+font-size:45px;
+color:#333;
+margin-bottom:20px;
+}
+
+.texto span{
+color:#ff5d8f;
+}
+
+.texto p{
+font-size:18px;
+margin-bottom:25px;
+color:#666;
+}
+
+.boton{
+padding:15px 25px;
+background:#ff5d8f;
+color:white;
+text-decoration:none;
+border-radius:30px;
+margin-right:15px;
+}
+
+.banner img{
+width:420px;
+border-radius:20px;
+}
+
+section{
+padding:60px;
+text-align:center;
+}
+
+.tarjetas{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.card{
+background:white;
+width:250px;
+padding:20px;
+border-radius:20px;
+box-shadow:0 5px 10px rgba(0,0,0,.1);
+}
+
+.card img{
+width:100%;
+height:170px;
+border-radius:15px;
+}
+
+.card h3{
+margin:15px;
+color:#ff5d8f;
+}
+
+.card a{
+display:inline-block;
+margin-top:15px;
+padding:10px 20px;
+background:#ff5d8f;
+color:white;
+text-decoration:none;
+border-radius:25px;
+}
+
+footer{
+background:#ffdbe7;
+padding:30px;
+text-align:center;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Boom Snack
+</div>
+
+<nav>
+
+<a href="index.HTML">Inicio</a>
+<a href="nosotros.HTML">Nosotros</a>
+<a href="snacks.HTML">Snacks</a>
+<a href="decoracion.HTML">Decoracion</a>
+<a href="galeria.HTML">Galeria</a>
+<a href="contacto.HTML">Contacto</a>
+
+
+</nav>
+
+</header>
+
+<div class="banner">
+
+<div class="texto">
+
+<h1>¡Un Toque de Dulzura para tus Momentos Especiales! 🍭🍩</span></h1>
+
+<p>
+<div class="snacks-seccion">
+  <h2>Endulza cada instante con nuestras espectaculares cajas y estaciones de snacks dulces. Una combinación irresistible de gomitas, chocolates, galletas, masmelos y postres diseñados para sorprender a niños y adultos por igual. ¡El detalle más dulce de tu celebración!</h2>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería Interactiva - Boom Snack</title>
+  
+  <style>
+    /* 1. Estilos del contenedor de la galería */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    /* 2. Estilos para las tarjetas/imágenes */
+    .galeria img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      cursor: pointer; /* Cambia el puntero para indicar que es clickeable */
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    /* 3. Estilos del visor flotante (Lightbox / Ventana emergente) */
+    .visor {
+      display: none; /* Oculto por defecto */
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro semitransparente */
+      justify-content: center;
+      align-items: center;
+      backdrop-filter: blur(5px);
+    }
+
+    /* Imagen grande dentro del visor */
+    .visor img {
+      max-width: 90%;
+      max-height: 85%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+      animation: zoom 0.3s ease;
+    }
+
+    /* Botón de cerrar (X) */
+    .visor .cerrar {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: #fff;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @keyframes zoom {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- GALERÍA DE IMÁGENES -->
+<div class="galeria">
+
+    <!-- Producto 1 -->
+    <div class="tarjeta-snack">
+        <img src="IMAGES/snacksdulces/1.jpeg" alt="Descripción de la imagen" onclick="abrirImagen(this.src)">
+        <p class="texto-descripcion">$4.000</p>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="tarjeta-snack">
+        <img src="IMAGES/snacksdulces/2.jpeg" alt="Descripción de la imagen" onclick="abrirImagen(this.src)">
+        <p class="texto-descripcion">$7.000</p>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="tarjeta-snack">
+        <img src="IMAGES/snacksdulces/3.jpeg" alt="Descripción de la imagen" onclick="abrirImagen(this.src)">
+        <p class="texto-descripcion">$4.000</p>
+    </div>
+
+<!-- Producto 4 -->
+    <div class="tarjeta-snack">
+        <img src="IMAGES/snacksdulces/4.jpeg" alt="Descripción de la imagen" onclick="abrirImagen(this.src)">
+        <p class="texto-descripcion">$5.000</p>
+    </div>
+
+    <!-- Producto 5 -->
+    <div class="tarjeta-snack">
+        <img src="IMAGES/snacksdulces/5.jpeg" alt="Descripción de la imagen" onclick="abrirImagen(this.src)">
+        <p class="texto-descripcion">$8.000</p>
+    </div>
+
+    <!-- Producto 6 -->
+    <div class="tarjeta-snack">
+        <img src="IMAGES/snacksdulces/6.jpeg" alt="Descripción de la imagen" onclick="abrirImagen(this.src)">
+        <p class="texto-descripcion">$7.000</p>
+    </div>
+
+<!-- Producto 7 -->
+    <div class="tarjeta-snack">
+        <img src="IMAGES/snacksdulces/7.jpeg" alt="Descripción de la imagen" onclick="abrirImagen(this.src)">
+        <p class="texto-descripcion">$6.000</p>
+    </div>
+
+    <!-- Producto 8 -->
+    <div class="tarjeta-snack">
+        <img src="IMAGES/snacksdulces/8.jpeg" alt="Descripción de la imagen" onclick="abrirImagen(this.src)">
+        <p class="texto-descripcion">$20.000</p>
+    </div>
+
+    <!-- Producto 9 -->
+    <div class="tarjeta-snack">
+        <img src="IMAGES/snacksdulces/9.jpeg" alt="Descripción de la imagen" onclick="abrirImagen(this.src)">
+        <p class="texto-descripcion">$30.000</p>
+    </div>
+
+<!-- Producto 10 -->
+    <div class="tarjeta-snack">
+        <img src="IMAGES/snacksdulces/10.jpeg" alt="Descripción de la imagen" onclick="abrirImagen(this.src)">
+        <p class="texto-descripcion">$3.000</p>
+    </div>
+
+    <!-- Producto 11 -->
+    <div class="tarjeta-snack">
+        <img src="IMAGES/snacksdulces/11.jpeg" alt="Descripción de la imagen" onclick="abrirImagen(this.src)">
+        <p class="texto-descripcion">$30.000</p>
+    </div>
+
+    <!-- Producto 12 -->
+    <div class="tarjeta-snack">
+        <img src="IMAGES/snacksdulces/12.jpeg" alt="Descripción de la imagen" onclick="abrirImagen(this.src)">
+        <p class="texto-descripcion">$30.000</p>
+    </div>
+
+   <!-- Producto 13 -->
+    <div class="tarjeta-snack">
+        <img src="IMAGES/snacksdulces/13.jpeg" alt="Descripción de la imagen" onclick="abrirImagen(this.src)">
+        <p class="texto-descripcion">$30.000</p>
+    </div>
+<!-- Producto 14 -->
+    <div class="tarjeta-snack">
+        <img src="IMAGES/snacksdulces/14.jpeg" alt="Descripción de la imagen" onclick="abrirImagen(this.src)">
+        <p class="texto-descripcion">$8.000</p>
+    </div>
+
+
+
+</div>
+ 
+    
+  </div>
+
+  <!-- VISOR FLOTANTE PARA IMAGEN EN GRANDE -->
+  <div id="visorFlotante" class="visor" onclick="cerrarImagen()">
+    <span class="cerrar">&times;</span>
+    <img id="imagenAmpliada" src="" alt="Imagen Ampliada">
+  </div>
+
+  <!-- SCRIPT PARA INTERACTIVIDAD -->
+  <script>
+    function abrirImagen(ruta) {
+      document.getElementById('imagenAmpliada').src = ruta;
+      document.getElementById('visorFlotante').style.display = 'flex';
+    }
+
+    function cerrarImagen() {
+      document.getElementById('visorFlotante').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+  </div>
+</div>
+</p>
+
+
+
+
+
+</div>
+
+
+</div>
+
+<section>
+
+<h2></h2>
+
+<p>
+<img src="imagenes/logo.png">
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2></h2>
+
+
+<p>
+</p>
+
+
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Boom Snack</h3>
+
+<p>
+Duitama - Boyaca
+</p>
+
+<p>
+3132730154
+</p>
+
+<p>
+snaksduitama@gmail.com
+</p>
+
+<p>
+2026 Boom Snack - Todos los derechos reservados
+</p>
+
+</footer>
+
+</body>
+
+</html>

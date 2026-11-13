@@ -1,0 +1,152 @@
+/* Configuración general */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Arreglo del Banner (Texto e Imagen lado a lado) */
+.banner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+}
+
+.banner .texto {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* Control del tamaño de la imagen */
+.banner img {
+    max-width: 100%;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* Estructura del encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+}
+
+/* Alineación de la lista del menú */
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Formato de los enlaces */
+header nav a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Ajuste responsive para pantallas pequeñas / móviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    header nav ul {
+        justify-content: center;
+        gap: 12px;
+    }
+}
+
+
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    gap: 15px;
+}
+
+header a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+}
+
+
+/* Estilos del Formulario de Contacto */
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.formulario-contacto .campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.formulario-contacto label {
+    font-weight: bold;
+    color: #333333;
+    font-size: 14px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+    border-color: #ff5c8d;
+}
+
+.boton-enviar {
+    background-color: #ff5c8d;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton-enviar:hover {
+    background-color: #e04b77;
+}
+
+
+
